@@ -2,7 +2,14 @@
 # sequence.
 
 FibArray = [1, 1]
+'''
+Function:
+    Function generates fibonacci sequence
 
+Input/Output:
+    Input: sequence length
+    Output: nothing/ FibArray
+'''
 def fibonacci(n):
     if n < 0:
         print("Incorrect input")
@@ -13,9 +20,16 @@ def fibonacci(n):
         FibArray.append(fibonacci(n - 1) + fibonacci(n - 2))
         return FibArray[n]
 
-num = int(input["Enter Fibonacci number to check :"])
-for i in FibArray:
-    if i = num:
-        print(f"{num} is {i}'th number in fibonacci sequence")
+UserIp = int(input("Enter Fibonacci number to check :"))
+fibonacci(num)
+for index in FibArray:
+    if index == UserIp:
+        if (UserIp == 1):
+            print(f"{num} is {1}'st number in fibonacci sequence")
+            print(f"{num} is {2}'nd number in fibonacci sequence")
+            exit()
+        else:
+            print(f"{num} is {i}'th number in fibonacci sequence")
+            exit()
 
 print(f"{num} is not part of the fibonacci sequence")
