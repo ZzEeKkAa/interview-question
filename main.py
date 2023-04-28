@@ -11,25 +11,27 @@ Input/Output:
     Output: nothing/ FibArray
 '''
 def fibonacci(n):
+    '''
+        assume Key is <-- Looking for
+    '''
     if n < 0:
         print("Incorrect input")
 
     elif n < len(FibArray):
-        return FibArray[n]
+        return n 
     else:
         FibArray.append(fibonacci(n - 1) + fibonacci(n - 2))
-        return FibArray[n]
+        return n
 
 UserIp = int(input("Enter Fibonacci number to check :"))
-fibonacci(num)
-for index in FibArray:
-    if index == UserIp:
+fibonacci(100)
+for number in FibArray:
+    if number == UserIp:
         if (UserIp == 1):
-            print(f"{num} is {1}'st number in fibonacci sequence")
-            print(f"{num} is {2}'nd number in fibonacci sequence")
+            print(f"{UserIp} is {1}'st or 2nd number in fibonacci sequence")
             exit()
         else:
-            print(f"{num} is {i}'th number in fibonacci sequence")
+            print(f"{UserIp} is {FibArray.index(number)}'th number in fibonacci sequence")
             exit()
 
-print(f"{num} is not part of the fibonacci sequence")
+print(f"{UserIp} is not part of the fibonacci sequence")
